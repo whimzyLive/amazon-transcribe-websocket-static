@@ -12,16 +12,12 @@
 <body>
     <div class="container">
         <h1>
-            Real-time Audio Transcription
+            Real-time Audio Transcription/Translation
         </h1>
         <p class="small-caps">
-            Using the <a href="https://aws.amazon.com/transcribe/">Amazon Transcribe</a> WebSocket API
+            Using the <a href="https://aws.amazon.com/transcribe/" target="_blank">Amazon Transcribe</a> WebSocket API and <a href="https://aws.amazon.com/translate/" target="_blank">Amazon Translate</a>
         </p>
         <hr/>
-        <p>
-            Create an <a href="https://aws.amazon.com/free/">AWS Account</a>, attach the necessary <a
-                href="policy.json"> IAM policy</a>, and enter your Access Id and Secret Key below.
-        </p>
 
         <div id="error" class="isa_error"></div>
 
@@ -41,22 +37,15 @@
                         <option value="es-US">US Spanish (es-US)</option>
                     </optgroup>
                 </select>
-
-                <label>Region:</label>
-                <select id="region">
-                    <option value="eu-west-1">EU (Ireland)</option>
-                    <option value="us-east-1">US East (N. Virginia)</option>
-                    <option value="us-east-2">US East (Ohio)</option>
-                    <option value="us-west-2">US West (Oregon)</option>
-                    <option value="ap-southeast-2">Asia Pacific (Sydney)</option>
-                    <option value="ca-central-1">Canada (Central)</option>
-                </select>
             </div>
             <div class="col">
                 <label>Output Language:</label>
                 <select id="translateTo">
-                    <option value="en">English</option>
                     <option value="he">Hebrew</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="ru">Russian</option>
+                    <option value="en">English</option>
                 </select>
             </div>
         </div>
