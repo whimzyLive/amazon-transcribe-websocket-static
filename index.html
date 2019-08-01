@@ -27,14 +27,7 @@
 
         <div class="row">
             <div class="col">
-                <label>Access ID:</label>
-                <input type="password" id="access_id" placeholder="ACCESS ID" value="" />
-
-                <label>Secret Key:</label>
-                <input type="password" id="secret_key" placeholder="SECRET KEY" value="" />
-            </div>
-            <div class="col">
-                <label>Language: </label>
+                <label>Input Language: </label>
                 <select id="language">
                     <optgroup label="English">
                         <option value="en-US">US English (en-US)</option>
@@ -51,17 +44,32 @@
 
                 <label>Region:</label>
                 <select id="region">
+                    <option value="eu-west-1">EU (Ireland)</option>
                     <option value="us-east-1">US East (N. Virginia)</option>
                     <option value="us-east-2">US East (Ohio)</option>
                     <option value="us-west-2">US West (Oregon)</option>
                     <option value="ap-southeast-2">Asia Pacific (Sydney)</option>
                     <option value="ca-central-1">Canada (Central)</option>
-                    <option value="eu-west-1">EU (Ireland)</option>
+                </select>
+            </div>
+            <div class="col">
+                <label>Output Language:</label>
+                <select id="translateTo">
+                    <option value="en">English</option>
+                    <option value="he">Hebrew</option>
                 </select>
             </div>
         </div>
-        <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5"
-            readonly="readonly"></textarea>
+        <div class="row">
+            <div class="col">
+                <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5"
+                  readonly="readonly"></textarea>
+            </div>
+            <div class="col">
+                <textarea id="translate" rows="5" readonly="readonly"></textarea>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col">
                 <button id="start-button" class="button-xl" title="Start Transcription">
@@ -95,7 +103,7 @@
     </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.15.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.340.0.min.js"></script>
     <script src="dist/main.js"></script>
 </body>
 
